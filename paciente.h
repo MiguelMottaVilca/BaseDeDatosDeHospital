@@ -7,7 +7,7 @@
 
 using namespace std;
 
-class Paciente : public virtual Persona, public Usuario
+class Paciente : public Persona, public Usuario
 {
    int codRegistro = 0;
 

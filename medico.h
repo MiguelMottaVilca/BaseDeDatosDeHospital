@@ -13,10 +13,8 @@ class Medico : public Persona, public Usuario {
 public:
 	Medico() : Persona(), Usuario() {
 		
-		cout << "Cantidad de horas disponibles: ";
-		cin >> cant;
-		cout << "Especialidad: ";
-		getline(cin, especialidad);
+		cout << "Cantidad de horas disponibles: ";cin >> cant;
+		cout << "Especialidad: ";getline(cin, especialidad);
 
 	}
 
@@ -25,6 +23,13 @@ public:
 	
 	void setCant( int cant ){
 		this -> cant = cant;
+	}
+	void mostrarMedico(){
+		mostrarPersona() ;
+		mostrarUsuario() ;
+		std::cout<< "ESPECIALIDA: " << especialidad <<endl;
+		std::cout<< "CANTIDAD DE HORAS: " << cant <<endl;
+		//completar
 	}
 
 };

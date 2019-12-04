@@ -14,7 +14,6 @@ void agregarPaciente(void){
 
     std::cout <<"     REGISTRANDO UN PACIENTE"<<'\n'<<'\n';
     ostringstream aux;
-    string text;
 
     Paciente tem ;
 
@@ -48,9 +47,10 @@ void agregarPaciente(void){
                     std::cout << "DIGITE EN EL RANGO DE NUMEROS" <<'\n';
                 }
             }
-
         }
     }
+
+    string text;
     if ( confirmar == 1 ){
         aux << tem.getApellido() << "___" << tem.getNombre() << "___" << tem.getDni() << "___" << tem.getRegistro()  
         << "___" << tem.getUsuario() << "___" << tem.getContra() << "*****" ;
@@ -65,20 +65,52 @@ void agregarPaciente(void){
         archivo<< text;
         archivo.close();
     }
-
-   
-
 }
 
 void agregarMedico(){
+    std::cout <<"     REGISTRANDO UN MEDICO"<<'\n'<<'\n';
 
     ostringstream aux;
     string text;
-    Usuario x;
 
     Medico tem ;
 
-    aux << tem.getApellido() << "___" << tem.getNombre() << "___" << tem.getDni() << "___" << tem.getEspecialidad() << "*****" ;
+    int confirmar;
+    std::cout << '\n'<<'\n';
+    system("clear");
+    std::cout << "      VERIFICAR SU INFORMACION        "<<'\n'<<'\n';
+    tem.mostrarMedico();
+
+    std::cout<<'\n'<<'\n';
+    std::cout << "0  MODIFICAR INFORMACION        "<<'\n';
+    std::cout << "1  GUARDAR SU INFORMACION        "<<'\n'<<'\n';
+    std::cout<<"DIGITE NUMERO : " ; std::cin >>confirmar;
+
+    if ( confirmar == 0){
+        while(true){
+            int num;
+            std::cout << "      MODIFICAR INFORMACION        "<<'\n'<<'\n';
+            std::cout << "1  MODIFICAR APELLIDO        "<<'\n';
+            std::cout << "2  MODIFICAR NOMBRE        "<<'\n';
+            std::cout << "3  MODIFICAR DNI        "<<'\n';
+            std::cout << "4  MODIFICAR ESPECIALIDAD        "<<'\n';
+            std::cout << "5  MODIFICAR HORAS DISPONIBLES        "<<'\n';
+            std::cout << "6  MODIFICAR CUENTA        "<<'\n';
+            std::cout << "7  MODIFICAR CONTRASEÑA        "<<'\n'<<'\n';
+            std::cout << "DIGITE NUMERO : ";std::cin >> num;
+            switch(num){
+                case 1:{
+                    std::cout<<"ESTAS EN EL CASO 1"<<endl;
+                }
+                default: {
+                    system("clear");
+                    std::cout << "DIGITE EN EL RANGO DE NUMEROS" <<'\n';
+                }
+            }
+        }
+    }
+
+    aux << tem.getApellido() << "___" << tem.getNombre() << "___" << tem.getDni() << "___" << tem.getEspecialidad() << "___" << tem.getCant() << "___" << tem.getUsuario() << "___" << tem.getContra()<< "*****" ;
 
     text = aux.str();
 
@@ -98,11 +130,45 @@ void agregarEnfermeros(){
 
     ostringstream aux;
     string text;
-    Usuario x;
 
     Enfermero tem;
 
-    aux << tem.getApellido() << "___" << tem.getNombre() << "___" << tem.getDni() << "___" << tem.getEspecialidad() << "*****" ;
+    int confirmar;
+    std::cout << '\n'<<'\n';
+    system("clear");
+    std::cout << "      VERIFICAR SU INFORMACION        "<<'\n'<<'\n';
+    tem.mostrarEnfermero();
+
+    std::cout<<'\n'<<'\n';
+    std::cout << "0  MODIFICAR INFORMACION        "<<'\n';
+    std::cout << "1  GUARDAR SU INFORMACION        "<<'\n'<<'\n';
+    std::cout<<"DIGITE NUMERO : " ; std::cin >>confirmar;
+
+    if ( confirmar == 0){
+        while(true){
+            int num;
+            std::cout << "      MODIFICAR INFORMACION        "<<'\n'<<'\n';
+            std::cout << "1  MODIFICAR APELLIDO        "<<'\n';
+            std::cout << "2  MODIFICAR NOMBRE        "<<'\n';
+            std::cout << "3  MODIFICAR DNI        "<<'\n';
+            std::cout << "4  MODIFICAR ESPECIALIDAD        "<<'\n';
+            std::cout << "5  MODIFICAR HORAS DISPONIBLES        "<<'\n';
+            std::cout << "6  MODIFICAR CUENTA        "<<'\n';
+            std::cout << "7  MODIFICAR CONTRASEÑA        "<<'\n'<<'\n';
+            std::cout << "DIGITE NUMERO : ";std::cin >> num;
+            switch(num){
+                case 1:{
+                    std::cout<<"ESTAS EN EL CASO 1"<<endl;
+                }
+                default: {
+                    system("clear");
+                    std::cout << "DIGITE EN EL RANGO DE NUMEROS" <<'\n';
+                }
+            }
+        }
+    }
+
+    aux << tem.getApellido() << "___" << tem.getNombre() << "___" << tem.getDni() << "___" << tem.getEspecialidad() << "___" << tem.getCant() << "___" << tem.getUsuario() << "___" << tem.getContra()<< "*****" ;
 
     text = aux.str();
 

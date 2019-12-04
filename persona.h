@@ -38,6 +38,26 @@ class Persona{
     virtual int getEdad(void){
         return edad;
     }
+
+//set
+
+    void setApellido( string apellido ){
+        this -> apellido = apellido;
+    }
+    void setNombre( string nombre ){
+        this -> nombre = nombre;
+    }
+    void setDni( string dni){
+        this -> dni = dni;
+    }
+    void setSexo( string sexo ){
+        this -> sexo = sexo;
+    }
+    void setEdad( int edad ){
+        this -> edad = edad;
+    }
+
+//mostrar
     void mostrarPersona(void){
         std::cout<<"APELLIDO: "<< apellido <<endl;
         std::cout<<"NOMBRE: "<< nombre <<endl;

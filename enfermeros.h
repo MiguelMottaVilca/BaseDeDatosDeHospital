@@ -11,9 +11,17 @@ public:
     cout << "Especialidad: ";getline(cin, especialidad);
 
 }
-string getEspecialidad() { return especialidad; }
-int getCant() { return cant; }
-
+//get
+    string getEspecialidad() { return especialidad; }
+    int getCant() { return cant; }
+//set
+	void setCant( int cant ){
+		this -> cant = cant;
+	}
+	void setEspecialidad( string especialidad ){
+		this -> especialidad = especialidad;
+	}
+//mostrar
 void mostrarEnfermero(){
 		mostrarPersona() ;
 		mostrarUsuario() ;
